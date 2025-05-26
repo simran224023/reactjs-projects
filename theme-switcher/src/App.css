@@ -1,0 +1,94 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: var(--transition);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.showcase {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.showcase h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.showcase p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.product-container {
+  width: 100%;
+  max-width: 400px;
+  animation: slideUp 0.7s ease-out;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: auto;
+  transition: var(--transition);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .showcase h1 {
+    font-size: 2rem;
+  }
+}

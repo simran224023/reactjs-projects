@@ -1,0 +1,50 @@
+.input-box {
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.875rem; 
+  display: flex;
+  gap: 1rem;
+}
+
+.input-section {
+  width: 50%;
+}
+
+.input-label {
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.input-field {
+  width: 100%;
+  background-color: transparent;
+  padding: 6px 0;
+  outline: none;
+  border: none;
+  font-size: inherit;
+}
+
+.currency-section {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.currency-label {
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.currency-select {
+  border-radius: 8px;
+  padding: 4px 8px;
+  background-color: #f3f4f6; /* equivalent to bg-gray-100 */
+  cursor: pointer;
+  outline: none;
+  border: none;
+}

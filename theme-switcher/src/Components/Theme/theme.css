@@ -1,0 +1,76 @@
+.theme-switch-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme-switch-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.theme-switch-slider {
+  width: 3.5rem;
+  height: 1.75rem;
+  background-color: var(--toggle-bg);
+  border-radius: 9999px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.theme-switch-slider::after {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  background-color: white;
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-switch-slider::before {
+  content: '☀️';
+  position: absolute;
+  left: 0.5rem;
+  top: 0.35rem;
+  font-size: 0.75rem;
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.theme-switch-input:checked + .theme-switch-slider {
+  background-color: var(--primary-color);
+}
+
+.theme-switch-input:checked + .theme-switch-slider::after {
+  transform: translateX(1.75rem);
+}
+
+.theme-switch-input:checked + .theme-switch-slider::before {
+  content: '🌙';
+  left: 2rem;
+}
+
+.theme-switch-input:focus + .theme-switch-slider {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+.theme-switch-text {
+  margin-left: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: var(--transition);
+}

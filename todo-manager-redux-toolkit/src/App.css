@@ -1,0 +1,229 @@
+:root {
+  --primary-color: #4a6da7;
+  --secondary-color: #e3f2fd;
+  --delete-color: #f44336;
+  --text-color: #333;
+  --light-bg: #f9f9f9;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  padding: 20px;
+}
+
+/* App Component */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 10px;
+}
+
+/* AddTodo Component */
+.add-todo-container {
+  margin-bottom: 30px;
+}
+
+.add-todo-form {
+  display: flex;
+  gap: 10px;
+}
+
+.add-todo-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.add-todo-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.add-todo-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-todo-button:hover {
+  background-color: #3a5a8f;
+}
+
+/* Todos Component */
+.todos-container {
+  background-color: white;
+  border-radius: var(--border-radius);
+}
+
+.todos-heading {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.todos-list {
+  list-style-type: none;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.todo-item:hover {
+  background-color: var(--secondary-color);
+}
+
+.todo-text {
+  font-size: 1.1rem;
+}
+
+.delete-button {
+  background-color: var(--delete-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .add-todo-form {
+    flex-direction: column;
+  }
+  
+  .add-todo-input, 
+  .add-todo-button {
+    width: 100%;
+  }
+  
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .delete-button {
+    align-self: flex-end;
+  }
+}
+
+/* Todo item styles */
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Edit form styles */
+.edit-form {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.update-button, .edit-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.update-button:hover, .edit-button:hover {
+  background-color: #3a5a8f;
+}
+
+.cancel-button {
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+  background-color: #757575;
+}
+
+/* Responsive adjustments for editing */
+@media (max-width: 600px) {
+  .edit-form {
+    flex-direction: column;
+  }
+  
+  .todo-actions {
+    align-self: flex-end;
+    margin-top: 8px;
+  }
+}
