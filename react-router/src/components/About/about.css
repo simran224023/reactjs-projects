@@ -1,0 +1,113 @@
+/* About section styles */
+.about-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: white;
+  min-height: 100vh; /* Ensure full height */
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #4b5563;
+  max-width: 1200px; /* Add max-width for better control */
+}
+
+.content {
+  display: block;
+  position: relative; /* Ensure proper stacking context */
+}
+
+/* Reset the stacking spacing */
+.content > * {
+  margin-top: 0;
+}
+
+.image-container {
+  width: 100%;
+  margin-bottom: 2rem; /* Add space below image on mobile */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove unwanted spacing */
+}
+
+.content-container {
+  width: 100%;
+  position: relative; /* Ensure text stays in its container */
+  background-color: rgba(255, 255, 255, 0.9); /* Add slight background to ensure text readability */
+  padding: 1rem 0; /* Add some padding */
+}
+
+.heading {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #111827; 
+  font-weight: 700;
+  margin-bottom: 1rem; /* Add space below heading */
+}
+
+.paragraph {
+  margin-top: 1.5rem;
+  color: #4b5563;
+}
+
+.paragraph-secondary {
+  margin-top: 1rem;
+  color: #4b5563;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .content {
+    display: flex;
+    gap: 3rem; /* Increased gap for better separation */
+    align-items: center;
+  }
+  
+  .image-container {
+    width: 45%; /* Slightly adjusted for better proportions */
+    margin-bottom: 0; /* Remove margin on larger screens */
+  }
+  
+  .content-container {
+    width: 55%;
+    padding: 0; /* Remove padding on larger screens */
+  }
+  
+  .heading {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    align-items: center;
+    gap: 4rem; /* Even more space between image and content */
+  }
+  
+  .image-container {
+    width: 45%; 
+  }
+  
+  .content-container {
+    width: 55%; 
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

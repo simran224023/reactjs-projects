@@ -22,6 +22,9 @@ A basic to-do list application with features to add, edit, delete, and mark task
 ### 📊 todo-manager-redux-toolkit
 Enhanced version of the to-do manager using Redux Toolkit for state management.
 
+### 🔄 react-router
+Multi-page application demonstrating client-side routing with React Router, including nested routes, protected routes, and navigation controls.
+
 ## Technologies Used
 
 - React.js
@@ -29,6 +32,7 @@ Enhanced version of the to-do manager using Redux Toolkit for state management.
 - CSS
 - Various React hooks (useState, useEffect, useContext)
 - Redux Toolkit (for todo-manager-redux-toolkit)
+- React Router (for navigation and routing between components)
 
 ## Getting Started
 
